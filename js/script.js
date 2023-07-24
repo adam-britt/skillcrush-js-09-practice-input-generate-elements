@@ -6,3 +6,15 @@ const showInput = document.querySelector(".add-show input");
 const showList = document.querySelector(".show-list");
 // span class for number of favorite shows
 const showCount = document.querySelector(".number");
+
+addShowButton.addEventListener("click", function {
+    const show = input.value;
+    if(show !== "") {
+        let listItem = document.createElement("li");
+        listItem.innerText = show;
+        showList.append(listItem);
+        let shows = document.querySelectorAll(".showList li");
+        showCount.innerText = shows.length;
+    }
+});
+
